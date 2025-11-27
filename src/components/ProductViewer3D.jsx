@@ -11,13 +11,13 @@ const ProductViewer3D = () => {
 
   // Array of product images for 360 view simulation
   const images = [
-    '/img/web1.PNG',
-    '/img/web2.PNG',
-    '/img/web3.PNG',
-    '/img/web4.PNG',
-    '/img/web5.PNG',
-    '/img/web6.PNG',
-    '/img/web7.PNG',
+    '/img/v1.jpg',
+    '/img/v2.jpg',
+    '/img/v3.jpg',
+    '/img/v7.PNG',
+    '/img/v8.PNG',
+    '/img/v9.PNG',
+    '/img/v10.PNG',
   ]
 
   const handleMouseDown = (e) => {

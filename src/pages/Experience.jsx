@@ -4,37 +4,37 @@ import { Gamepad2, Dumbbell, Coffee, Music, Trophy, Users } from 'lucide-react'
 const Experience = () => {
   const lifestyleImages = [
     {
-      src: '/img/web1.PNG',
+      src: '/img/v1.jpg',
       title: 'Gaming',
       icon: <Gamepad2 size={32} />,
       description: 'Stay sharp during marathon gaming sessions'
     },
     {
-      src: '/img/web2.PNG',
+      src: '/img/v2.jpg',
       title: 'Fitness',
       icon: <Dumbbell size={32} />,
       description: 'Power through intense workouts'
     },
     {
-      src: '/img/web3.PNG',
+      src: '/img/v3.jpg',
       title: 'Work',
       icon: <Coffee size={32} />,
       description: 'Conquer deadlines with laser focus'
     },
     {
-      src: '/img/web4.PNG',
+      src: '/img/v7.PNG',
       title: 'Party',
       icon: <Music size={32} />,
       description: 'Keep the energy going all night'
     },
     {
-      src: '/img/web5.PNG',
+      src: '/img/v8.PNG',
       title: 'Sports',
       icon: <Trophy size={32} />,
       description: 'Dominate on the field or court'
     },
     {
-      src: '/img/web6.PNG',
+      src: '/img/v9.PNG',
       title: 'Social',
       icon: <Users size={32} />,
       description: 'Stay energized with your crew'

@@ -11,7 +11,7 @@ const Shop = () => {
       id: 'single',
       name: 'Single Can',
       price: 3.99,
-      image: '/img/web1.PNG',
+      image: '/img/v1.jpg',
       description: 'Perfect for trying Ngiri for the first time',
       quantity: '1 x 16oz Can'
     },
@@ -19,7 +19,7 @@ const Shop = () => {
       id: '4pack',
       name: '4-Pack',
       price: 14.99,
-      image: '/img/web5.PNG',
+      image: '/img/v8.PNG',
       description: 'Great value for regular energy boost',
       quantity: '4 x 16oz Cans',
       badge: 'Popular'
@@ -28,7 +28,7 @@ const Shop = () => {
       id: '12pack',
       name: '12-Pack',
       price: 39.99,
-      image: '/img/web6.PNG',
+      image: '/img/v9.PNG',
       description: 'Best value - Stock up and save',
       quantity: '12 x 16oz Cans',
       badge: 'Best Value'
@@ -37,7 +37,7 @@ const Shop = () => {
       id: '24pack',
       name: '24-Pack Case',
       price: 69.99,
-      image: '/img/web7.PNG',
+      image: '/img/v10.PNG',
       description: 'Ultimate power supply for serious athletes',
       quantity: '24 x 16oz Cans',
       badge: 'Pro Choice'

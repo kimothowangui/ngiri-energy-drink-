@@ -107,7 +107,7 @@ const V16PowerSection = () => {
             <div className="relative">
               <motion.img
                 whileHover={{ scale: 1.05 }}
-                src="/img/web2.PNG"
+                src="/img/v2.jpg"
                 alt="Ngiri V16 Can"
                 className="w-full max-w-lg mx-auto drop-shadow-2xl"
               />

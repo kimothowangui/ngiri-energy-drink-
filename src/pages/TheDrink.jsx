@@ -92,7 +92,7 @@ const TheDrink = () => {
               className="relative"
             >
               <img
-                src="/img/web3.PNG"
+                src="/img/v3.jpg"
                 alt="Ngiri Energy Drink"
                 className="w-full max-w-lg mx-auto drop-shadow-2xl"
               />
@@ -159,7 +159,7 @@ const TheDrink = () => {
               transition={{ duration: 0.8 }}
             >
               <img
-                src="/img/web4.PNG"
+                src="/img/v7.PNG"
                 alt="Ngiri Nutrition"
                 className="w-full max-w-lg mx-auto drop-shadow-2xl"
               />

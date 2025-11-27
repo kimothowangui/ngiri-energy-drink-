@@ -110,7 +110,7 @@ const Hero = () => {
               className="relative z-10"
             >
               <img
-                src="/img/web1.PNG"
+                src="/img/v1.jpg"
                 alt="Ngiri Energy Drink"
                 className="w-full max-w-md h-auto drop-shadow-2xl"
               />
