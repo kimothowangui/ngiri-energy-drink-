@@ -1,0 +1,117 @@
+╔═══════════════════════════════════════════════════════════╗
+║      🚀 DEPLOY NGIRI TO VERCEL - QUICK GUIDE              ║
+╚═══════════════════════════════════════════════════════════╝
+
+✅ Your project is NOW configured for Vercel!
+
+───────────────────────────────────────────────────────────
+
+🎯 EASIEST METHOD - Web Interface (No CLI needed):
+
+1. Go to: https://vercel.com/signup
+   → Sign up FREE (use GitHub/GitLab/Bitbucket or email)
+
+2. Click "Add New" → "Project"
+
+3. Choose ONE:
+   
+   📁 Option A - Upload Folder:
+      • Click "Browse" or drag this entire folder
+      • Skip the git repo step
+   
+   🔗 Option B - Import from Git:
+      • First push to GitHub (see below)
+      • Then import the repository
+
+4. Vercel auto-detects settings ✓
+   
+5. Click "Deploy" button
+
+6. Wait ~2 minutes ⏱️
+
+7. GET YOUR LINK! 🎉
+   → https://ngiri-energy-drink.vercel.app
+   (or similar)
+
+───────────────────────────────────────────────────────────
+
+💻 COMMAND LINE METHOD (For developers):
+
+Step 1 - Install Vercel CLI:
+  npm install -g vercel
+
+Step 2 - Login:
+  vercel login
+
+Step 3 - Deploy:
+  vercel --prod
+
+  (Follow prompts, press Enter for defaults)
+
+Step 4 - Get your link! 🎉
+
+───────────────────────────────────────────────────────────
+
+🔧 IF USING GITHUB (Recommended for updates):
+
+# 1. Create repo on GitHub.com, then:
+
+git init
+git add .
+git commit -m "Ngiri energy drink website"
+git branch -M main
+git remote add origin https://github.com/YOUR-USERNAME/ngiri-energy.git
+git push -u origin main
+
+# 2. On Vercel:
+   → Import from GitHub
+   → Select your repo
+   → Deploy!
+
+# 3. Now every git push auto-deploys! 🔄
+
+───────────────────────────────────────────────────────────
+
+📋 WHAT'S CONFIGURED:
+
+✓ vercel.json - Deployment settings
+✓ SPA routing - All pages work correctly
+✓ Build command - Optimized production build
+✓ Deploy script - Just run: npm run deploy
+
+───────────────────────────────────────────────────────────
+
+🎯 AFTER DEPLOYMENT:
+
+Your website will be live at:
+  https://your-project-name.vercel.app
+
+Features you get FREE:
+  ✓ HTTPS/SSL certificate
+  ✓ Global CDN (fast worldwide)
+  ✓ Automatic builds
+  ✓ Preview deployments
+  ✓ Analytics dashboard
+  ✓ Custom domain support
+
+───────────────────────────────────────────────────────────
+
+🆘 NEED HELP?
+
+→ Detailed guide: See DEPLOY-TO-VERCEL.md
+→ Vercel docs: https://vercel.com/docs
+→ Having issues? Let me know!
+
+───────────────────────────────────────────────────────────
+
+⚡ QUICK TEST BEFORE DEPLOY:
+
+Run locally to verify everything works:
+  npm run build
+  npm run preview
+
+If that works, deployment will too! ✓
+
+═══════════════════════════════════════════════════════════
+            DEPLOY IN LESS THAN 5 MINUTES! 🚀
+═══════════════════════════════════════════════════════════

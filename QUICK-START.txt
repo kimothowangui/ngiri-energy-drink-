@@ -1,0 +1,70 @@
+╔══════════════════════════════════════════════════════════════╗
+║     NGIRI "DOUBLE TURBO V16" ENERGY DRINK WEBSITE            ║
+║                   QUICK START GUIDE                          ║
+╚══════════════════════════════════════════════════════════════╝
+
+🚀 INSTANT PREVIEW:
+
+   Open your browser and go to:
+   
+   ➜  http://localhost:3000
+   
+   The development server should already be running!
+
+───────────────────────────────────────────────────────────────
+
+📋 IF SERVER ISN'T RUNNING:
+
+   1. Open terminal/PowerShell in this folder
+   2. Run: npm run dev
+   3. Open: http://localhost:3000
+
+───────────────────────────────────────────────────────────────
+
+🎯 WHAT TO EXPLORE:
+
+   ✓ Homepage - Animated hero with floating can
+   ✓ The Drink - Ingredients & nutrition facts
+   ✓ Shop - 360° product viewer (DRAG TO ROTATE!)
+   ✓ Experience - Lifestyle gallery & community
+
+───────────────────────────────────────────────────────────────
+
+🎮 INTERACTIVE FEATURES:
+
+   Shop Page 360° Viewer:
+   • DRAG left/right to rotate can
+   • SCROLL to zoom in/out
+   • CLICK auto-rotate button
+   
+   Throughout Site:
+   • Smooth scroll animations
+   • Hover effects on all buttons
+   • Parallax backgrounds
+
+───────────────────────────────────────────────────────────────
+
+🎨 DESIGN FEATURES:
+
+   • Motorsport-inspired bold aesthetic
+   • Crimson Red & Electric Yellow colors
+   • Glow effects & smooth animations
+   • Fully responsive (mobile to desktop)
+   • 60fps smooth transitions
+
+───────────────────────────────────────────────────────────────
+
+💡 TIPS:
+
+   ✓ Best on Chrome/Firefox/Safari/Edge
+   ✓ Try resizing window for responsive design
+   ✓ Scroll slowly to see parallax effects
+   ✓ Don't miss the 360° viewer on Shop page!
+
+───────────────────────────────────────────────────────────────
+
+📖 For detailed instructions, see: PREVIEW-INSTRUCTIONS.md
+
+═══════════════════════════════════════════════════════════════
+              ENJOY THE NGIRI EXPERIENCE! ⚡🏁
+═══════════════════════════════════════════════════════════════
