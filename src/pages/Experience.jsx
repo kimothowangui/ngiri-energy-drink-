@@ -62,11 +62,11 @@ const Experience = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-ngiri-midnight via-ngiri-dark to-ngiri-dark">
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-20 left-10 w-96 h-96 bg-ngiri-crimson rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-ngiri-yellow rounded-full blur-3xl animate-pulse"></div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+        <div className="absolute inset-0 bg-white">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-20 left-10 w-96 h-96 bg-ngiri-lime rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-ngiri-lime-light rounded-full blur-3xl"></div>
           </div>
         </div>
 
@@ -77,13 +77,13 @@ const Experience = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-6xl md:text-9xl font-bebas text-white mb-6">
-              THE <span className="text-ngiri-crimson glow-red">NGIRI</span>
+            <h1 className="text-6xl md:text-9xl font-bebas text-ngiri-black mb-6">
+              THE <span className="text-ngiri-lime">NGIRI</span>
             </h1>
-            <h2 className="text-5xl md:text-7xl font-bebas text-ngiri-yellow glow-yellow mb-8">
+            <h2 className="text-5xl md:text-7xl font-bebas text-ngiri-lime-dark mb-8">
               EXPERIENCE
             </h2>
-            <p className="text-xl md:text-2xl font-montserrat text-ngiri-silver max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl font-montserrat text-gray-700 max-w-4xl mx-auto">
               More than just energy. It's a lifestyle. Join the movement of champions, gamers, athletes, and go-getters who refuse to settle for ordinary.
             </p>
           </motion.div>
@@ -91,13 +91,13 @@ const Experience = () => {
       </section>
 
       {/* Lifestyle Gallery */}
-      <section className="py-24 bg-gradient-to-b from-ngiri-dark to-ngiri-midnight">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-bebas text-ngiri-crimson glow-red text-center mb-16"
+            className="text-5xl md:text-7xl font-bebas text-ngiri-lime text-center mb-16"
           >
             YOUR LIFESTYLE, AMPLIFIED
           </motion.h2>
@@ -120,9 +120,9 @@ const Experience = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-ngiri-dark via-ngiri-dark/70 to-transparent opacity-90 group-hover:opacity-95 transition-opacity">
+                  <div className="absolute inset-0 bg-gradient-to-t from-ngiri-black via-ngiri-black/70 to-transparent opacity-90 group-hover:opacity-95 transition-opacity">
                     <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <div className="text-ngiri-crimson mb-3">
+                      <div className="text-ngiri-lime mb-3">
                         {item.icon}
                       </div>
                       <h3 className="text-3xl font-bebas text-white mb-2">
@@ -141,7 +141,7 @@ const Experience = () => {
       </section>
 
       {/* Community Section */}
-      <section className="py-24 bg-ngiri-midnight">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -149,10 +149,10 @@ const Experience = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-7xl font-bebas text-ngiri-yellow glow-yellow mb-6">
+            <h2 className="text-5xl md:text-7xl font-bebas text-ngiri-lime mb-6">
               JOIN THE COMMUNITY
             </h2>
-            <p className="text-xl font-montserrat text-ngiri-silver max-w-3xl mx-auto mb-8">
+            <p className="text-xl font-montserrat text-gray-700 max-w-3xl mx-auto mb-8">
               Connect with thousands of Ngiri enthusiasts. Share your moments, inspire others, and be part of something bigger.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -160,7 +160,7 @@ const Experience = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="#"
-                className="px-8 py-4 bg-ngiri-crimson text-white font-montserrat font-bold text-lg rounded-lg hover:bg-ngiri-crimson/80 transition-colors"
+                className="px-8 py-4 bg-ngiri-lime text-white font-montserrat font-bold text-lg rounded-lg hover:bg-ngiri-lime-dark transition-colors"
               >
                 #NGIRIPOWER
               </motion.a>
@@ -191,10 +191,10 @@ const Experience = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
-                <h3 className="text-5xl md:text-6xl font-bebas text-ngiri-crimson glow-red mb-2">
+                <h3 className="text-5xl md:text-6xl font-bebas text-ngiri-lime mb-2">
                   {stat.value}
                 </h3>
-                <p className="text-lg font-montserrat text-ngiri-silver">
+                <p className="text-lg font-montserrat text-gray-700">
                   {stat.label}
                 </p>
               </motion.div>
@@ -204,13 +204,13 @@ const Experience = () => {
       </section>
 
       {/* Events Section */}
-      <section className="py-24 bg-gradient-to-b from-ngiri-midnight to-ngiri-dark">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-bebas text-ngiri-crimson glow-red text-center mb-16"
+            className="text-5xl md:text-7xl font-bebas text-ngiri-lime text-center mb-16"
           >
             SPONSORED EVENTS
           </motion.h2>
@@ -224,9 +224,9 @@ const Experience = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-ngiri-dark/50 border-2 border-ngiri-crimson/30 rounded-lg p-8 hover:border-ngiri-crimson transition-all"
+                className="bg-white border-2 border-ngiri-lime/30 rounded-lg p-8 hover:border-ngiri-lime transition-all shadow-md"
               >
-                <div className="text-ngiri-yellow font-montserrat font-bold text-sm mb-2">
+                <div className="text-ngiri-lime-dark font-montserrat font-bold text-sm mb-2">
                   {event.date}
                 </div>
                 <h3 className="text-3xl font-bebas text-white mb-4">

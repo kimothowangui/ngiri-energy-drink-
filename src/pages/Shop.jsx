@@ -65,10 +65,10 @@ const Shop = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-b from-ngiri-midnight via-ngiri-dark to-ngiri-dark overflow-hidden">
+      <section className="relative py-24 bg-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-96 h-96 bg-ngiri-crimson rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-ngiri-yellow rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-20 left-10 w-96 h-96 bg-ngiri-lime rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-ngiri-lime-light rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -78,10 +78,10 @@ const Shop = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-6xl md:text-8xl font-bebas text-white mb-4">
-              SHOP <span className="text-ngiri-crimson glow-red">NGIRI</span>
+            <h1 className="text-6xl md:text-8xl font-bebas text-ngiri-black mb-4">
+              SHOP <span className="text-ngiri-lime">NGIRI</span>
             </h1>
-            <p className="text-xl md:text-2xl font-montserrat text-ngiri-silver max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl font-montserrat text-gray-700 max-w-3xl mx-auto">
               Choose your power pack and unleash your potential
             </p>
           </motion.div>
@@ -99,13 +99,13 @@ const Shop = () => {
       </section>
 
       {/* Products Grid */}
-      <section className="py-24 bg-ngiri-midnight">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-6xl font-bebas text-ngiri-yellow glow-yellow text-center mb-16"
+            className="text-5xl md:text-6xl font-bebas text-ngiri-lime text-center mb-16">
           >
             CHOOSE YOUR PACK
           </motion.h2>
@@ -120,14 +120,14 @@ const Shop = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -10 }}
                 onClick={() => setSelectedPack(product.id)}
-                className={`relative bg-ngiri-dark/50 border-2 rounded-lg p-6 cursor-pointer transition-all ${
+                className={`relative bg-white border-2 rounded-lg p-6 cursor-pointer transition-all ${
                   selectedPack === product.id
-                    ? 'border-ngiri-crimson shadow-lg shadow-ngiri-crimson/50'
-                    : 'border-ngiri-crimson/30 hover:border-ngiri-crimson'
+                    ? 'border-ngiri-lime shadow-lg shadow-ngiri-lime/50'
+                    : 'border-gray-300 hover:border-ngiri-lime'
                 }`}
               >
                 {product.badge && (
-                  <div className="absolute top-4 right-4 bg-ngiri-crimson text-white px-3 py-1 rounded-full text-xs font-montserrat font-bold">
+                  <div className="absolute top-4 right-4 bg-ngiri-lime text-white px-3 py-1 rounded-full text-xs font-montserrat font-bold">
                     {product.badge}
                   </div>
                 )}
@@ -140,18 +140,18 @@ const Shop = () => {
                   />
                 </div>
 
-                <h3 className="text-2xl font-bebas text-white mb-2">
+                <h3 className="text-2xl font-bebas text-ngiri-black mb-2">
                   {product.name}
                 </h3>
-                <p className="text-ngiri-silver font-montserrat text-sm mb-3">
+                <p className="text-gray-600 font-montserrat text-sm mb-3">
                   {product.quantity}
                 </p>
-                <p className="text-ngiri-silver font-montserrat text-sm mb-4">
+                <p className="text-gray-700 font-montserrat text-sm mb-4">
                   {product.description}
                 </p>
 
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl font-bebas text-ngiri-crimson">
+                  <span className="text-3xl font-bebas text-ngiri-lime">
                     ${product.price}
                   </span>
                   <div className="flex items-center gap-1 text-ngiri-yellow">
@@ -168,8 +168,8 @@ const Shop = () => {
                   whileTap={{ scale: 0.95 }}
                   className={`w-full py-3 rounded-lg font-montserrat font-bold transition-colors flex items-center justify-center gap-2 ${
                     selectedPack === product.id
-                      ? 'bg-ngiri-crimson text-white'
-                      : 'bg-ngiri-dark border-2 border-ngiri-crimson text-ngiri-crimson hover:bg-ngiri-crimson hover:text-white'
+                      ? 'bg-ngiri-lime text-white'
+                      : 'bg-white border-2 border-ngiri-lime text-ngiri-lime hover:bg-ngiri-lime hover:text-white'
                   }`}
                 >
                   <ShoppingCart size={20} />
@@ -189,7 +189,7 @@ const Shop = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-12 py-5 bg-ngiri-crimson text-white font-montserrat font-bold text-xl rounded-lg hover:bg-ngiri-crimson/80 transition-colors inline-flex items-center gap-3 animate-pulse-glow"
+              className="px-12 py-5 bg-ngiri-lime text-white font-montserrat font-bold text-xl rounded-lg hover:bg-ngiri-lime-dark transition-colors inline-flex items-center gap-3"
             >
               <ShoppingCart size={28} />
               ADD TO CART - ${products.find(p => p.id === selectedPack)?.price}
@@ -199,7 +199,7 @@ const Shop = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 bg-gradient-to-b from-ngiri-midnight to-ngiri-dark">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
@@ -211,13 +211,13 @@ const Shop = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-ngiri-crimson/20 border-2 border-ngiri-crimson rounded-full mb-4 text-ngiri-crimson">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-ngiri-lime/20 border-2 border-ngiri-lime rounded-full mb-4 text-ngiri-lime">
                   {benefit.icon}
                 </div>
-                <h3 className="text-2xl font-bebas text-white mb-2">
+                <h3 className="text-2xl font-bebas text-ngiri-black mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-ngiri-silver font-montserrat">
+                <p className="text-gray-700 font-montserrat">
                   {benefit.description}
                 </p>
               </motion.div>
@@ -227,13 +227,13 @@ const Shop = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-ngiri-midnight">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-6xl font-bebas text-ngiri-crimson glow-red text-center mb-16"
+            className="text-5xl md:text-6xl font-bebas text-ngiri-lime text-center mb-16">
           >
             WHAT PEOPLE SAY
           </motion.h2>
@@ -265,21 +265,21 @@ const Shop = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-ngiri-dark/50 border-2 border-ngiri-crimson/30 rounded-lg p-6"
+                className="bg-white border-2 border-ngiri-lime/30 rounded-lg p-6 shadow-md"
               >
                 <div className="flex items-center gap-1 text-ngiri-yellow mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} size={16} fill="currentColor" />
                   ))}
                 </div>
-                <p className="text-ngiri-silver font-montserrat mb-4 italic">
+                <p className="text-gray-700 font-montserrat mb-4 italic">
                   "{testimonial.text}"
                 </p>
                 <div>
-                  <p className="text-white font-montserrat font-bold">
+                  <p className="text-ngiri-black font-montserrat font-bold">
                     {testimonial.name}
                   </p>
-                  <p className="text-ngiri-crimson font-montserrat text-sm">
+                  <p className="text-ngiri-lime font-montserrat text-sm">
                     {testimonial.role}
                   </p>
                 </div>

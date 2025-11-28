@@ -53,14 +53,14 @@ const TheDrink = () => {
   return (
     <div ref={ref} className="pt-20">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
         <motion.div
           style={{ y }}
-          className="absolute inset-0 bg-gradient-to-b from-ngiri-midnight via-ngiri-dark to-ngiri-dark"
+          className="absolute inset-0 bg-white"
         >
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-20 left-10 w-96 h-96 bg-ngiri-crimson rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-ngiri-yellow rounded-full blur-3xl"></div>
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-20 left-10 w-96 h-96 bg-ngiri-lime rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-ngiri-lime-light rounded-full blur-3xl"></div>
           </div>
         </motion.div>
 
@@ -71,16 +71,16 @@ const TheDrink = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-6xl md:text-8xl font-bebas text-white mb-4">
+              <h1 className="text-6xl md:text-8xl font-bebas text-ngiri-black mb-4">
                 THE DRINK
               </h1>
-              <h2 className="text-4xl md:text-6xl font-bebas text-ngiri-crimson glow-red mb-6">
+              <h2 className="text-4xl md:text-6xl font-bebas text-ngiri-lime mb-6">
                 ENGINEERED FOR CHAMPIONS
               </h2>
-              <p className="text-xl font-montserrat text-ngiri-silver mb-6">
+              <p className="text-xl font-montserrat text-gray-700 mb-6">
                 Ngiri isn't just an energy drink—it's a precision-engineered formula designed to push your limits and elevate your performance. Every ingredient is carefully selected to deliver maximum results.
               </p>
-              <p className="text-lg font-montserrat text-ngiri-silver">
+              <p className="text-lg font-montserrat text-gray-700">
                 Whether you're an athlete, a gamer, a professional, or anyone who demands more from life, Ngiri gives you the edge you need to dominate.
               </p>
             </motion.div>
@@ -103,7 +103,7 @@ const TheDrink = () => {
       </section>
 
       {/* Ingredients Section */}
-      <section className="py-24 bg-gradient-to-b from-ngiri-dark to-ngiri-midnight">
+      <section className="py-24 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -111,10 +111,10 @@ const TheDrink = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-7xl font-bebas text-ngiri-yellow glow-yellow mb-4">
+            <h2 className="text-5xl md:text-7xl font-bebas text-ngiri-lime mb-4">
               POWER-PACKED INGREDIENTS
             </h2>
-            <p className="text-xl font-montserrat text-ngiri-silver max-w-3xl mx-auto">
+            <p className="text-xl font-montserrat text-gray-700 max-w-3xl mx-auto">
               Every can is loaded with scientifically-proven ingredients for maximum performance
             </p>
           </motion.div>
@@ -128,18 +128,18 @@ const TheDrink = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -10 }}
-                className="bg-ngiri-dark/50 border-2 border-ngiri-crimson/30 rounded-lg p-6 hover:border-ngiri-crimson transition-all"
+                className="bg-white border-2 border-ngiri-lime/30 rounded-lg p-6 hover:border-ngiri-lime hover:shadow-lg transition-all"
               >
-                <div className="text-ngiri-crimson mb-4">
+                <div className="text-ngiri-lime mb-4">
                   {ingredient.icon}
                 </div>
-                <h3 className="text-2xl font-bebas text-white mb-2">
+                <h3 className="text-2xl font-bebas text-ngiri-black mb-2">
                   {ingredient.name}
                 </h3>
-                <p className="text-ngiri-yellow font-montserrat font-bold text-lg mb-3">
+                <p className="text-ngiri-lime-dark font-montserrat font-bold text-lg mb-3">
                   {ingredient.amount}
                 </p>
-                <p className="text-ngiri-silver font-montserrat text-sm">
+                <p className="text-gray-600 font-montserrat text-sm">
                   {ingredient.description}
                 </p>
               </motion.div>
@@ -149,7 +149,7 @@ const TheDrink = () => {
       </section>
 
       {/* Nutrition Facts */}
-      <section className="py-24 bg-ngiri-midnight">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -171,10 +171,10 @@ const TheDrink = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-5xl md:text-6xl font-bebas text-ngiri-crimson glow-red mb-6">
+              <h2 className="text-5xl md:text-6xl font-bebas text-ngiri-lime mb-6">
                 NUTRITION FACTS
               </h2>
-              <div className="bg-ngiri-dark/50 border-2 border-ngiri-crimson/30 rounded-lg p-8">
+              <div className="bg-white border-2 border-ngiri-lime/30 rounded-lg p-8 shadow-lg">
                 <div className="space-y-4 font-montserrat">
                   <div className="flex justify-between border-b border-ngiri-silver/20 pb-2">
                     <span className="text-white font-semibold">Serving Size</span>
@@ -190,11 +190,11 @@ const TheDrink = () => {
                   </div>
                   <div className="flex justify-between border-b border-ngiri-silver/20 pb-2">
                     <span className="text-white font-semibold">Sugars</span>
-                    <span className="text-ngiri-yellow font-bold">0g</span>
+                    <span className="text-ngiri-lime-dark font-bold">0g</span>
                   </div>
                   <div className="flex justify-between border-b border-ngiri-silver/20 pb-2">
                     <span className="text-white font-semibold">Caffeine</span>
-                    <span className="text-ngiri-crimson font-bold">300mg</span>
+                    <span className="text-ngiri-lime font-bold">300mg</span>
                   </div>
                   <div className="flex justify-between border-b border-ngiri-silver/20 pb-2">
                     <span className="text-white font-semibold">Taurine</span>
@@ -212,7 +212,7 @@ const TheDrink = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-b from-ngiri-midnight to-ngiri-dark">
+      <section className="py-24 bg-gradient-to-b from-white to-gray-100">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -220,10 +220,10 @@ const TheDrink = () => {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h2 className="text-5xl md:text-7xl font-bebas text-white mb-6">
-              EXPERIENCE THE <span className="text-ngiri-crimson glow-red">V16 DIFFERENCE</span>
+            <h2 className="text-5xl md:text-7xl font-bebas text-ngiri-black mb-6">
+              EXPERIENCE THE <span className="text-ngiri-lime">V16 DIFFERENCE</span>
             </h2>
-            <p className="text-xl font-montserrat text-ngiri-silver mb-8">
+            <p className="text-xl font-montserrat text-gray-700 mb-8">
               Don't settle for ordinary. Get the energy drink that matches your intensity.
             </p>
             <motion.a
