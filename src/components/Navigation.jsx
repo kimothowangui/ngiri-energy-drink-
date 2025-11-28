@@ -19,7 +19,7 @@ const Navigation = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-ngiri-dark/95 backdrop-blur-sm border-b border-ngiri-crimson/30"
+      className="fixed top-0 left-0 right-0 z-50 bg-ngiri-black/95 backdrop-blur-sm border-b border-ngiri-lime/30"
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
@@ -29,7 +29,7 @@ const Navigation = () => {
               whileHover={{ scale: 1.05 }}
               className="flex items-center gap-2"
             >
-              <h1 className="text-4xl md:text-5xl font-bebas text-ngiri-crimson glow-red">
+              <h1 className="text-4xl md:text-5xl font-bebas text-ngiri-lime">
                 NGIRI
               </h1>
               <span className="text-sm md:text-base font-montserrat text-ngiri-yellow font-bold">
@@ -46,8 +46,8 @@ const Navigation = () => {
                   whileHover={{ scale: 1.1 }}
                   className={`font-montserrat font-semibold text-lg transition-colors ${
                     location.pathname === item.path
-                      ? 'text-ngiri-crimson'
-                      : 'text-white hover:text-ngiri-crimson'
+                      ? 'text-ngiri-lime'
+                      : 'text-white hover:text-ngiri-lime'
                   }`}
                 >
                   {item.name}
@@ -78,7 +78,7 @@ const Navigation = () => {
                 <div
                   className={`py-3 font-montserrat font-semibold text-lg ${
                     location.pathname === item.path
-                      ? 'text-ngiri-crimson'
+                      ? 'text-ngiri-lime'
                       : 'text-white'
                   }`}
                 >

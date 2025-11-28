@@ -3,12 +3,12 @@ import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
 
 const Footer = () => {
   return (
-    <footer className="bg-ngiri-dark border-t border-ngiri-crimson/30 py-12">
+    <footer className="bg-ngiri-black border-t border-ngiri-lime/30 py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-4xl font-bebas text-ngiri-crimson glow-red mb-4">
+            <h3 className="text-4xl font-bebas text-ngiri-lime mb-4">
               NGIRI
             </h3>
             <p className="text-ngiri-silver font-montserrat text-sm">
@@ -24,7 +24,7 @@ const Footer = () => {
             <h4 className="text-xl font-bebas text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="text-ngiri-silver hover:text-ngiri-crimson transition-colors font-montserrat text-sm">
+                <a href="/" className="text-ngiri-silver hover:text-ngiri-lime transition-colors font-montserrat text-sm">
                   Home
                 </a>
               </li>

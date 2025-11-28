@@ -12,6 +12,10 @@ export default {
         'ngiri-yellow': '#FFFF00',
         'ngiri-dark': '#0A0A0A',
         'ngiri-silver': '#C0C0C0',
+        'ngiri-lime': '#A4D65E',
+        'ngiri-lime-dark': '#7AB32E',
+        'ngiri-lime-light': '#C5E89D',
+        'ngiri-black': '#1A1A1A',
       },
       fontFamily: {
         'bebas': ['Bebas Neue', 'cursive'],

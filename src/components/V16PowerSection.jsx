@@ -36,7 +36,7 @@ const V16PowerSection = () => {
   ]
 
   return (
-    <section ref={ref} className="relative py-24 overflow-hidden bg-gradient-to-b from-ngiri-dark via-ngiri-midnight to-ngiri-dark">
+    <section ref={ref} className="relative py-24 overflow-hidden bg-gradient-to-b from-ngiri-black via-ngiri-lime-dark to-ngiri-black">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -55,7 +55,7 @@ const V16PowerSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-6xl md:text-8xl font-bebas text-ngiri-crimson glow-red mb-4"
+            className="text-6xl md:text-8xl font-bebas text-ngiri-lime mb-4"
           >
             V16 POWER
           </motion.h2>
@@ -80,9 +80,9 @@ const V16PowerSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ scale: 1.05, y: -10 }}
-              className="bg-ngiri-dark/50 border-2 border-ngiri-crimson/30 rounded-lg p-6 text-center hover:border-ngiri-crimson transition-all"
+              className="bg-ngiri-black/50 border-2 border-ngiri-lime/30 rounded-lg p-6 text-center hover:border-ngiri-lime transition-all"
             >
-              <div className="text-ngiri-crimson mb-4 flex justify-center">
+              <div className="text-ngiri-lime mb-4 flex justify-center">
                 {feature.icon}
               </div>
               <h3 className="text-2xl font-bebas text-white mb-2">
@@ -164,7 +164,7 @@ const V16PowerSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="/the-drink"
-                className="inline-block px-8 py-4 bg-ngiri-yellow text-ngiri-dark font-montserrat font-bold text-lg rounded-lg hover:bg-ngiri-yellow/80 transition-colors"
+                className="inline-block px-8 py-4 bg-ngiri-lime text-white font-montserrat font-bold text-lg rounded-lg hover:bg-ngiri-lime-dark transition-colors"
               >
                 DISCOVER MORE
               </motion.a>

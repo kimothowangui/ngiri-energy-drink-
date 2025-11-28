@@ -13,32 +13,32 @@ const Hero = () => {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Animated Background */}
+    <section ref={ref} className="relative min-h-screen flex items-center overflow-hidden pt-20">
+      {/* Lime Green Animated Background */}
       <motion.div
         style={{ y, opacity }}
-        className="absolute inset-0 bg-gradient-to-b from-ngiri-midnight via-ngiri-dark to-ngiri-dark"
+        className="absolute inset-0 bg-gradient-to-br from-ngiri-lime via-ngiri-lime-dark to-ngiri-black"
       >
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-96 h-96 bg-ngiri-crimson rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-ngiri-yellow rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-20 left-10 w-96 h-96 bg-ngiri-lime-light rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 left-1/4 w-96 h-96 bg-ngiri-yellow rounded-full blur-3xl animate-pulse"></div>
         </div>
       </motion.div>
 
-      <div className="container mx-auto px-4 z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
+      <div className="w-full z-10 flex">
+        {/* LEFT SIDE - Content */}
+        <div className="w-full lg:w-7/12 px-8 lg:px-16 flex items-center">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
+            className="w-full"
           >
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-6xl md:text-8xl lg:text-9xl font-bebas text-white mb-4"
+              className="text-7xl md:text-8xl lg:text-9xl font-bebas text-white mb-4"
             >
               NGIRI
             </motion.h1>
@@ -49,10 +49,10 @@ const Hero = () => {
               transition={{ delay: 0.4 }}
               className="mb-6"
             >
-              <h2 className="text-4xl md:text-6xl font-bebas text-ngiri-crimson glow-red">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bebas text-white">
                 DOUBLE TURBO
               </h2>
-              <h2 className="text-5xl md:text-7xl font-bebas text-ngiri-yellow glow-yellow">
+              <h2 className="text-6xl md:text-7xl lg:text-8xl font-bebas text-ngiri-yellow glow-yellow">
                 V16
               </h2>
             </motion.div>
@@ -61,7 +61,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="text-xl md:text-2xl font-montserrat text-ngiri-silver mb-8 max-w-xl mx-auto lg:mx-0"
+              className="text-xl md:text-2xl font-montserrat text-white mb-8 max-w-xl"
             >
               Experience the ultimate energy boost. 16 cylinders of pure power in every can.
             </motion.p>
@@ -70,13 +70,13 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-4"
             >
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="/shop"
-                className="px-8 py-4 bg-ngiri-crimson text-white font-montserrat font-bold text-lg rounded-lg hover:bg-ngiri-crimson/80 transition-colors animate-pulse-glow"
+                className="px-8 py-4 bg-white text-ngiri-lime-dark font-montserrat font-bold text-lg rounded-lg hover:bg-ngiri-yellow hover:text-ngiri-black transition-colors shadow-xl"
               >
                 GET YOURS NOW
               </motion.a>
@@ -84,41 +84,32 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="/the-drink"
-                className="px-8 py-4 border-2 border-ngiri-yellow text-ngiri-yellow font-montserrat font-bold text-lg rounded-lg hover:bg-ngiri-yellow hover:text-ngiri-dark transition-colors"
+                className="px-8 py-4 border-2 border-white text-white font-montserrat font-bold text-lg rounded-lg hover:bg-white hover:text-ngiri-lime-dark transition-colors"
               >
                 LEARN MORE
               </motion.a>
             </motion.div>
           </motion.div>
-
-          {/* Product Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative flex justify-center"
-          >
-            <motion.div
-              animate={{
-                y: [0, -20, 0],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="relative z-10"
-            >
-              <img
-                src="/img/v1.jpg"
-                alt="Ngiri Energy Drink"
-                className="w-full max-w-md h-auto drop-shadow-2xl"
-              />
-              {/* Glow effect behind can */}
-              <div className="absolute inset-0 bg-ngiri-crimson blur-3xl opacity-30 -z-10 scale-150"></div>
-            </motion.div>
-          </motion.div>
         </div>
+
+        {/* RIGHT SIDE - V16 Attached Image (Edge to Edge, Top to Bottom) */}
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="hidden lg:block w-5/12 relative"
+        >
+          <div className="absolute inset-0 right-0">
+            <img
+              src="/img/v16-attached.jpg"
+              alt="Ngiri V16"
+              className="h-screen w-full object-cover object-left"
+              style={{ objectPosition: 'left center' }}
+            />
+            {/* Gradient overlay on left edge for blend */}
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-ngiri-lime-dark/80 to-transparent"></div>
+          </div>
+        </motion.div>
       </div>
 
       {/* Scroll Indicator */}
