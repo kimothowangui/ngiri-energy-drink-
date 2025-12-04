@@ -18,8 +18,14 @@ export default {
         'ngiri-black': '#1A1A1A',
       },
       fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
         'bebas': ['Bebas Neue', 'cursive'],
         'montserrat': ['Montserrat', 'sans-serif'],
+      },
+      fontWeight: {
+        'light': '300',
+        'medium': '500',
+        'bold': '700',
       },
       animation: {
         'pulse-glow': 'pulse-glow 2s ease-in-out infinite',

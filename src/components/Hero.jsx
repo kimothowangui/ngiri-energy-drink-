@@ -25,9 +25,25 @@ const Hero = () => {
         </div>
       </motion.div>
 
-      <div className="w-full z-10 flex">
+      <div className="w-full z-10 flex relative">
+        {/* Mobile/Tablet: V16 Background Image (Transparent) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="lg:hidden absolute inset-0 z-0"
+        >
+          <img
+            src="/img/v16-attached.jpg"
+            alt="Ngiri V16 Energy Drink"
+            className="h-full w-full object-cover object-center opacity-30"
+          />
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-ngiri-lime-dark/70 via-ngiri-lime-dark/60 to-ngiri-lime-dark/70"></div>
+        </motion.div>
+
         {/* LEFT SIDE - Content */}
-        <div className="w-full lg:w-7/12 px-8 lg:px-16 flex items-center">
+        <div className="w-full lg:w-7/12 px-8 lg:px-16 flex items-center relative z-20">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
@@ -92,7 +108,7 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        {/* RIGHT SIDE - V16 Attached Image (Edge to Edge, Top to Bottom) */}
+        {/* RIGHT SIDE - V16 Image (Desktop Only: Edge-to-Edge) */}
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
@@ -102,7 +118,7 @@ const Hero = () => {
           <div className="absolute inset-0 right-0">
             <img
               src="/img/v16-attached.jpg"
-              alt="Ngiri V16"
+              alt="Ngiri V16 Energy Drink"
               className="h-screen w-full object-cover object-left"
               style={{ objectPosition: 'left center' }}
             />

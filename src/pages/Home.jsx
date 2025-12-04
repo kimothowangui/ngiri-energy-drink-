@@ -1,81 +1,32 @@
-import Hero from '../components/Hero'
-import V16PowerSection from '../components/V16PowerSection'
+import HeroCarousel from '../components/HeroCarousel'
+import FeatureSections from '../components/FeatureSections'
+import FeaturedProducts from '../components/FeaturedProducts'
+import OfferSection from '../components/OfferSection'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 
 const Home = () => {
   return (
-    <div>
-      <Hero />
-      <V16PowerSection />
+    <div className="relative min-h-screen">
+      {/* Global Background Image with Opacity */}
+      <div className="fixed inset-0 z-0">
+        <img 
+          src="/img/v16-attached.jpg" 
+          alt="Background" 
+          className="w-full h-full object-cover opacity-20"
+        />
+      </div>
       
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-b from-ngiri-black to-ngiri-lime-dark">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h2 className="text-5xl md:text-7xl font-bebas text-white mb-6">
-              READY TO <span className="text-ngiri-lime">UNLEASH</span> YOUR POWER?
-            </h2>
-            <p className="text-xl font-montserrat text-ngiri-silver mb-8">
-              Join thousands of athletes, gamers, and go-getters who trust Ngiri to fuel their ambitions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="/shop"
-                className="px-10 py-5 bg-ngiri-lime text-white font-montserrat font-bold text-xl rounded-lg hover:bg-ngiri-lime-dark transition-colors inline-flex items-center justify-center gap-2"
-              >
-                SHOP NOW <ArrowRight size={24} />
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="/experience"
-                className="px-10 py-5 border-2 border-ngiri-yellow text-ngiri-yellow font-montserrat font-bold text-xl rounded-lg hover:bg-ngiri-yellow hover:text-ngiri-dark transition-colors inline-flex items-center justify-center gap-2"
-              >
-                EXPLORE EXPERIENCE <ArrowRight size={24} />
-              </motion.a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-24 bg-ngiri-lime-dark">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: '300mg', label: 'Caffeine' },
-              { value: '0g', label: 'Sugar' },
-              { value: '5hrs', label: 'Energy' },
-              { value: '100%', label: 'Power' },
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <h3 className="text-5xl md:text-6xl font-bebas text-white mb-2">
-                  {stat.value}
-                </h3>
-                <p className="text-lg font-montserrat text-ngiri-silver">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Global Gradient Overlay - Blue to Lime Green */}
+      <div className="fixed inset-0 z-0 bg-gradient-to-br from-blue-900/80 via-cyan-800/70 to-lime-900/80" />
+      
+      {/* Content with relative positioning */}
+      <div className="relative z-10">
+        <HeroCarousel />
+        <FeatureSections />
+        <FeaturedProducts />
+        <OfferSection />
+      </div>
     </div>
   )
 }

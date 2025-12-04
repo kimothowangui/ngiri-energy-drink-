@@ -229,10 +229,10 @@ const Experience = () => {
                 <div className="text-ngiri-lime-dark font-montserrat font-bold text-sm mb-2">
                   {event.date}
                 </div>
-                <h3 className="text-3xl font-bebas text-white mb-4">
+                <h3 className="text-3xl font-bebas text-ngiri-black mb-4">
                   {event.title}
                 </h3>
-                <p className="text-ngiri-silver font-montserrat">
+                <p className="text-gray-700 font-montserrat">
                   {event.description}
                 </p>
               </motion.div>
@@ -242,7 +242,7 @@ const Experience = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-ngiri-midnight">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -250,17 +250,17 @@ const Experience = () => {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h2 className="text-5xl md:text-7xl font-bebas text-white mb-6">
-              READY TO <span className="text-ngiri-crimson glow-red">JOIN THE REVOLUTION</span>?
+            <h2 className="text-5xl md:text-7xl font-bebas text-ngiri-black mb-6">
+              READY TO <span className="text-ngiri-lime">JOIN THE REVOLUTION</span>?
             </h2>
-            <p className="text-xl font-montserrat text-ngiri-silver mb-8">
+            <p className="text-xl font-montserrat text-gray-700 mb-8">
               Be part of the Ngiri lifestyle. Unleash your power today.
             </p>
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="/shop"
-              className="inline-block px-12 py-5 bg-ngiri-crimson text-white font-montserrat font-bold text-xl rounded-lg hover:bg-ngiri-crimson/80 transition-colors animate-pulse-glow"
+              className="inline-block px-12 py-5 bg-ngiri-lime text-white font-montserrat font-bold text-xl rounded-lg hover:bg-ngiri-lime-dark transition-colors"
             >
               GET NGIRI NOW
             </motion.a>

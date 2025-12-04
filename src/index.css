@@ -10,19 +10,53 @@
 
 body {
   margin: 0;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0A0A0A;
+  background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0f1419 100%);
+  min-height: 100vh;
   color: white;
   overflow-x: hidden;
 }
 
+/* Hide scrollbar for all browsers */
+* {
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Bebas Neue', cursive;
-  letter-spacing: 2px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+p, span, div, a, button, input, textarea, select {
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Custom scrollbar */

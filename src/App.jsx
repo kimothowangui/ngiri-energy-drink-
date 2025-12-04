@@ -8,7 +8,7 @@ import Experience from './pages/Experience'
 
 function App() {
   return (
-    <div className="min-h-screen bg-ngiri-dark">
+    <div className="min-h-screen">
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
