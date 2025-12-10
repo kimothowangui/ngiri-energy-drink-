@@ -50,7 +50,7 @@ const OfferSection = () => {
                 </p>
                 
                 <Link
-                  to="/shop"
+                  to="/products"
                   className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-2xl shadow-cyan-500/30 w-fit"
                 >
                   <ShoppingBag size={20} />

@@ -229,7 +229,7 @@ const TheDrink = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/shop"
+              href="/products"
               className="inline-block px-10 py-5 bg-ngiri-crimson text-white font-montserrat font-bold text-xl rounded-lg hover:bg-ngiri-crimson/80 transition-colors animate-pulse-glow"
             >
               BUY NOW

@@ -1,17 +1,27 @@
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Menu, X, ShoppingCart, User } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-const Navigation = () => {
+const Navigation = ({ currentSlide = 0 }) => {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
+  
+  // Color schemes matching carousel slides
+  const navColors = [
+    { bg: 'from-blue-950/70 via-cyan-900/70 to-blue-950/70', border: 'border-cyan-500/30' }, // Cosmic Energy
+    { bg: 'from-amber-950/70 via-orange-900/70 to-amber-950/70', border: 'border-amber-500/30' }, // Bar Culture
+    { bg: 'from-orange-950/70 via-amber-900/70 to-orange-950/70', border: 'border-orange-500/30' }, // Golden Hour
+    { bg: 'from-lime-950/70 via-green-900/70 to-lime-950/70', border: 'border-lime-500/30' }, // Tropical Vibe
+  ]
+  
+  const currentColors = navColors[currentSlide] || navColors[0]
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Product', path: '/the-drink' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'The Drink', path: '/the-drink' },
+    { name: 'Products', path: '/products' },
+    { name: 'Experience', path: '/experience' },
   ]
 
   return (
@@ -19,7 +29,7 @@ const Navigation = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="relative w-full z-50 bg-transparent"
+      className={`fixed top-0 w-full z-50 bg-gradient-to-r ${currentColors.bg} backdrop-blur-lg transition-all duration-700`}
     >
       <div className="w-full px-8 py-4">
         <div className="flex items-center justify-between">
@@ -73,7 +83,7 @@ const Navigation = () => {
             </Link>
 
             {/* Cart Icon */}
-            <Link to="/shop">
+            <Link to="/products">
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 className="text-white/70 hover:text-white transition-colors relative"
@@ -122,9 +132,9 @@ const Navigation = () => {
                 <User size={20} /> Account
               </div>
             </Link>
-            <Link to="/shop" onClick={() => setIsOpen(false)}>
+            <Link to="/products" onClick={() => setIsOpen(false)}>
               <div className="py-3 font-semibold text-lg text-white flex items-center gap-2">
-                <ShoppingCart size={20} /> Cart
+                <ShoppingCart size={20} /> Products
               </div>
             </Link>
           </motion.div>

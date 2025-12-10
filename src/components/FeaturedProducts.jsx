@@ -96,12 +96,15 @@ const FeaturedProducts = () => {
                   {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
-                  {/* Quick Add Button */}
+                  {/* Quick View Button */}
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
-                    <button className="bg-white text-black font-bold py-3 px-6 rounded-full flex items-center gap-2 hover:bg-cyan-500 hover:text-white transition-colors">
+                    <Link 
+                      to={`/product/${product.id}`}
+                      className="bg-white text-black font-bold py-3 px-6 rounded-full flex items-center gap-2 hover:bg-cyan-500 hover:text-white transition-colors"
+                    >
                       <ShoppingCart size={18} />
-                      Add to Cart
-                    </button>
+                      Quick View
+                    </Link>
                   </div>
                 </div>
 
@@ -132,10 +135,10 @@ const FeaturedProducts = () => {
                   {/* Price and Link */}
                   <div className="flex items-center justify-between">
                     <span className="text-3xl font-bold text-white">
-                      {product.price}
+                      KSh {product.price}
                     </span>
                     <Link
-                      to="/shop"
+                      to={`/product/${product.id}`}
                       className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm flex items-center gap-1 group/link"
                     >
                       View Details

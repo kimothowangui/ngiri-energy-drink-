@@ -259,7 +259,7 @@ const Experience = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/shop"
+              href="/products"
               className="inline-block px-12 py-5 bg-ngiri-lime text-white font-montserrat font-bold text-xl rounded-lg hover:bg-ngiri-lime-dark transition-colors"
             >
               GET NGIRI NOW

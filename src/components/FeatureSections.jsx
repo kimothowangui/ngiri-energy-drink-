@@ -41,7 +41,7 @@ const FeatureSections = () => {
       subtitle: "JOIN THE MOVEMENT",
       description: "From gamers to athletes, entrepreneurs to adventurers - Ngiri V16 powers those who refuse to settle. Be part of a community that demands more.",
       icon: Users,
-      link: "/shop",
+      link: "/products",
       gradient: "from-green-500 to-emerald-600"
     }
   ];
@@ -138,7 +138,7 @@ const FeatureSections = () => {
           className="mt-20 text-center"
         >
           <Link
-            to="/shop"
+            to="/products"
             className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-5 px-12 text-lg uppercase tracking-wider transition-all transform hover:scale-105 shadow-2xl shadow-cyan-500/30 rounded-lg"
           >
             EXPLORE ALL FLAVORS

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
-const HeroCarousel = () => {
+const HeroCarousel = ({ onSlideChange }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -59,6 +59,13 @@ const HeroCarousel = () => {
     }, 7000);
     return () => clearInterval(timer);
   }, [slides.length]);
+  
+  // Notify parent component of slide changes
+  useEffect(() => {
+    if (onSlideChange) {
+      onSlideChange(currentSlide);
+    }
+  }, [currentSlide, onSlideChange]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);

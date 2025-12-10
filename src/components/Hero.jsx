@@ -13,7 +13,7 @@ const Hero = () => {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center overflow-hidden pt-20">
+    <section ref={ref} className="relative min-h-screen flex items-center overflow-hidden pt-24">
       {/* Lime Green Animated Background */}
       <motion.div
         style={{ y, opacity }}
@@ -91,7 +91,7 @@ const Hero = () => {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="/shop"
+                href="/products"
                 className="px-8 py-4 bg-white text-ngiri-lime-dark font-montserrat font-bold text-lg rounded-lg hover:bg-ngiri-yellow hover:text-ngiri-black transition-colors shadow-xl"
               >
                 GET YOURS NOW
